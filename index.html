@@ -3,113 +3,210 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Antler Convoy Integrations | Enterprise E-Commerce Systems</title>
+    <title>The Antler Convoy | Enterprise Marketplace Middleware</title>
     <style>
         :root {
-            --bg-color: #0f172a;
-            --card-bg: #1e293b;
-            --text-main: #f8fafc;
-            --text-muted: #94a3b8;
-            --accent: #38bdf8;
-            --border: #334155;
+            --bg-main: #030712;
+            --bg-gradient: radial-gradient(circle at top right, #0b1528 0%, #030712 60%);
+            --card-bg: rgba(15, 23, 42, 0.6);
+            --card-border: rgba(51, 65, 85, 0.5);
+            --card-hover: rgba(56, 189, 248, 0.1);
+            --text-main: #f9fafb;
+            --text-muted: #9ca3af;
+            --accent-glow: #38bdf8;
+            --accent-green: #10b981;
         }
+
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            background-color: var(--bg-color);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-main);
+            background-image: var(--bg-gradient);
             color: var(--text-main);
             margin: 0;
             padding: 0;
-            line-height: 1.6;
+            line-height: 1.5;
+            -webkit-font-smoothing: antialiased;
         }
-        header {
-            max-width: 1000px;
+
+        /* Hero Section */
+        .hero {
+            max-width: 1100px;
             margin: 0 auto;
-            padding: 4rem 2rem 2rem 2rem;
+            padding: 8rem 2rem 4rem 2rem;
+            text-align: center;
         }
-        .tag {
-            color: var(--accent);
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(56, 189, 248, 0.1);
+            border: 1px solid rgba(56, 189, 248, 0.2);
+            color: var(--accent-glow);
+            padding: 0.35rem 1rem;
+            border-radius: 9999px;
             font-size: 0.85rem;
+            font-weight: 500;
+            letter-spacing: 0.05em;
+            margin-bottom: 1.5rem;
         }
+
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            background-color: var(--accent-green);
+            border-radius: 50%;
+            display: inline-block;
+            box-shadow: 0 0 8px var(--accent-green);
+        }
+
         h1 {
-            font-size: 2.5rem;
-            margin: 0.5rem 0;
+            font-size: 3.5rem;
             font-weight: 800;
+            letter-spacing: -0.025em;
+            margin: 0 0 1.5rem 0;
+            background: linear-gradient(to right, #ffffff, #94a3b8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
+
         .lead {
             font-size: 1.25rem;
             color: var(--text-muted);
-            max-width: 600px;
-            margin-bottom: 2rem;
+            max-width: 700px;
+            margin: 0 auto 3rem auto;
         }
-        main {
-            max-width: 1000px;
+
+        /* Main Content Container */
+        .container {
+            max-width: 1100px;
             margin: 0 auto;
-            padding: 2rem;
+            padding: 0 2rem 6rem 2rem;
         }
+
+        h2 {
+            font-size: 1.75rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            letter-spacing: -0.02em;
+        }
+
+        /* Features Grid */
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 5rem;
         }
+
         .card {
-            background-color: var(--card-bg);
-            border: 1px solid var(--border);
-            padding: 2rem;
-            border-radius: 12px;
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            padding: 2.5rem;
+            border-radius: 16px;
+            backdrop-filter: blur(12px);
+            transition: all 0.3s ease;
         }
+
+        .card:hover {
+            border-color: var(--accent-glow);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 15px var(--card-hover);
+            transform: translateY(-2px);
+        }
+
         .card h3 {
-            margin-top: 0;
             font-size: 1.25rem;
-            color: var(--text-main);
+            font-weight: 600;
+            margin: 0 0 0.75rem 0;
         }
+
         .card p {
             color: var(--text-muted);
             font-size: 0.95rem;
-            margin-bottom: 0;
+            margin: 0;
         }
-        footer {
-            max-width: 1000px;
-            margin: 6rem auto 2rem auto;
+
+        /* Tech Stack Info Strip */
+        .tech-strip {
+            background: rgba(15, 23, 42, 0.4);
+            border: 1px solid var(--card-border);
+            border-radius: 16px;
             padding: 2rem;
-            border-top: 1px solid var(--border);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .tech-item {
+            font-weight: 600;
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            letter-spacing: 0.05em;
+        }
+
+        .tech-item span {
+            color: var(--accent-glow);
+        }
+
+        /* Footer */
+        footer {
+            border-top: 1px solid var(--card-border);
+            padding: 3rem 2rem;
+            text-align: center;
             color: var(--text-muted);
             font-size: 0.85rem;
-            text-align: center;
+        }
+
+        /* Responsive Scaling */
+        @media (max-width: 768px) {
+            h1 { font-size: 2.5rem; }
+            .hero { padding-top: 5rem; }
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <div class="tag">Supply Chain Systems Contractor</div>
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="badge">
+            <span class="status-dot"></span> Core Systems Operational
+        </div>
         <h1>The Antler Convoy</h1>
-        <p class="lead">Specializing in proprietary inventory synchronization architectures, secure corporate marketplace API integrations, and middleware logistics tools.</p>
+        <p class="lead">Engineered middleware infrastructure specializing in automated stock synchronization, secure high-volume OAuth 2.0 connection maps, and structured enterprise marketplace catalog alignment.</p>
     </header>
 
-    <main>
-        <h2>Core Specializations</h2>
+    <!-- Core Features Grid -->
+    <main class="container">
+        <h2>System Architecture Overview</h2>
         <div class="grid">
             <div class="card">
-                <h3>ERP & Storefront Middleware</h3>
-                <p>Building private Python-based integrations to map internal supplier databases directly to corporate marketplace storefront infrastructure safely and securely.</p>
+                <h3>Relational Database Mapping</h3>
+                <p>Constructing multi-node Python pipelines optimized to synchronize internal inventory configurations directly with enterprise platform environments while handling strict rate limits securely.</p>
             </div>
             <div class="card">
-                <h3>Secure Token & OAuth Lifecycle</h3>
-                <p>Implementing strict enterprise OAuth 2.0 user token flows and programmatic environments to maintain compliant, uninterrupted data synchronization parameters.</p>
+                <h3>Encrypted OAuth Lifecycles</h3>
+                <p>Deploying programmatic client credential environments to manage refreshing account application access patterns safely without workflow service disruption.</p>
             </div>
             <div class="card">
-                <h3>Data Optimization & Taxonomy</h3>
-                <p>Automating the structural normalization of internal SKUs, product metadata variants, and supply chain logistics into marketplace-compliant configurations.</p>
+                <h3>Taxonomical Formatting</h3>
+                <p>Converting internal raw product fields, item dimensions, and supply logistics dynamically into clean, compliant platform configurations that optimize platform readability.</p>
             </div>
+        </div>
+
+        <h2>Environment Architecture</h2>
+        <div class="tech-strip">
+            <div class="tech-item">CORE // <span>Python 3.x</span></div>
+            <div class="tech-item">STACK // <span>RESTful APIs</span></div>
+            <div class="tech-item">AUTH // <span>OAuth 2.0 Protocols</span></div>
+            <div class="tech-item">DATA // <span>JSON Payload Sets</span></div>
         </div>
     </main>
 
+    <!-- Footer System -->
     <footer>
-        <p>&copy; 2026 The Antler Convoy. All rights reserved. Private Systems & Marketplace Integration Infrastructures.</p>
+        <p>&copy; 2026 The Antler Convoy. Systems restricted to internal operational mapping and private endpoint client management. All rights reserved.</p>
     </footer>
 
 </body>
