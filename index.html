@@ -1,213 +1,146 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Antler Convoy | Enterprise Marketplace Middleware</title>
-    <style>
-        :root {
-            --bg-main: #030712;
-            --bg-gradient: radial-gradient(circle at top right, #0b1528 0%, #030712 60%);
-            --card-bg: rgba(15, 23, 42, 0.6);
-            --card-border: rgba(51, 65, 85, 0.5);
-            --card-hover: rgba(56, 189, 248, 0.1);
-            --text-main: #f9fafb;
-            --text-muted: #9ca3af;
-            --accent-glow: #38bdf8;
-            --accent-green: #10b981;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background-color: var(--bg-main);
-            background-image: var(--bg-gradient);
-            color: var(--text-main);
-            margin: 0;
-            padding: 0;
-            line-height: 1.5;
-            -webkit-font-smoothing: antialiased;
-        }
-
-        /* Hero Section */
-        .hero {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 8rem 2rem 4rem 2rem;
-            text-align: center;
-        }
-
-        .badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            background: rgba(56, 189, 248, 0.1);
-            border: 1px solid rgba(56, 189, 248, 0.2);
-            color: var(--accent-glow);
-            padding: 0.35rem 1rem;
-            border-radius: 9999px;
-            font-size: 0.85rem;
-            font-weight: 500;
-            letter-spacing: 0.05em;
-            margin-bottom: 1.5rem;
-        }
-
-        .status-dot {
-            width: 8px;
-            height: 8px;
-            background-color: var(--accent-green);
-            border-radius: 50%;
-            display: inline-block;
-            box-shadow: 0 0 8px var(--accent-green);
-        }
-
-        h1 {
-            font-size: 3.5rem;
-            font-weight: 800;
-            letter-spacing: -0.025em;
-            margin: 0 0 1.5rem 0;
-            background: linear-gradient(to right, #ffffff, #94a3b8);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .lead {
-            font-size: 1.25rem;
-            color: var(--text-muted);
-            max-width: 700px;
-            margin: 0 auto 3rem auto;
-        }
-
-        /* Main Content Container */
-        .container {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 0 2rem 6rem 2rem;
-        }
-
-        h2 {
-            font-size: 1.75rem;
-            font-weight: 700;
-            margin-bottom: 2rem;
-            letter-spacing: -0.02em;
-        }
-
-        /* Features Grid */
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 1.5rem;
-            margin-bottom: 5rem;
-        }
-
-        .card {
-            background: var(--card-bg);
-            border: 1px solid var(--card-border);
-            padding: 2.5rem;
-            border-radius: 16px;
-            backdrop-filter: blur(12px);
-            transition: all 0.3s ease;
-        }
-
-        .card:hover {
-            border-color: var(--accent-glow);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 15px var(--card-hover);
-            transform: translateY(-2px);
-        }
-
-        .card h3 {
-            font-size: 1.25rem;
-            font-weight: 600;
-            margin: 0 0 0.75rem 0;
-        }
-
-        .card p {
-            color: var(--text-muted);
-            font-size: 0.95rem;
-            margin: 0;
-        }
-
-        /* Tech Stack Info Strip */
-        .tech-strip {
-            background: rgba(15, 23, 42, 0.4);
-            border: 1px solid var(--card-border);
-            border-radius: 16px;
-            padding: 2rem;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
-            align-items: center;
-            gap: 1.5rem;
-        }
-
-        .tech-item {
-            font-weight: 600;
-            color: var(--text-muted);
-            font-size: 1.1rem;
-            letter-spacing: 0.05em;
-        }
-
-        .tech-item span {
-            color: var(--accent-glow);
-        }
-
-        /* Footer */
-        footer {
-            border-top: 1px solid var(--card-border);
-            padding: 3rem 2rem;
-            text-align: center;
-            color: var(--text-muted);
-            font-size: 0.85rem;
-        }
-
-        /* Responsive Scaling */
-        @media (max-width: 768px) {
-            h1 { font-size: 2.5rem; }
-            .hero { padding-top: 5rem; }
-        }
-    </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Antler Convoy</title>
+<meta name="description" content="The Antler Convoy: an eBay store, browser extensions for resellers and Roblox creators, and a Roblox game in the works.">
+<meta name="theme-color" content="#030d1a">
+<link rel="canonical" href="https://theantlerconvoy.com/">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="stylesheet" href="/assets/site.css">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="The Antler Convoy">
+<meta property="og:title" content="The Antler Convoy">
+<meta property="og:description" content="An eBay store, browser extensions for resellers and Roblox creators, and a Roblox game in the works.">
+<meta property="og:url" content="https://theantlerconvoy.com/">
+<meta property="og:image" content="https://theantlerconvoy.com/assets/og.png">
 </head>
 <body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="/"><img src="/assets/logo-160.webp" alt="" width="40" height="40"><span>The Antler Convoy</span></a>
+    <nav class="site-nav" aria-label="Main">
+      <a href="/#ventures">Ventures</a>
+      <a href="/support/">Support</a>
+    </nav>
+  </div>
+</header>
 
-    <!-- Hero Section -->
-    <header class="hero">
-        <div class="badge">
-            <span class="status-dot"></span> Core Systems Operational
+<main id="main">
+  <section class="hero" aria-labelledby="title">
+    <div class="wrap">
+      <div class="hero-text">
+        <p class="eyebrow">Independent online ventures</p>
+        <h1 id="title">The Antler Convoy</h1>
+        <p class="lead">An eBay store, browser extensions for resellers and Roblox creators, and a Roblox game on the way, all built and run by The Antler Convoy.</p>
+        <div class="actions">
+          <a class="btn gold" href="#ventures">See what we make</a>
+          <a class="btn" href="mailto:support@theantlerconvoy.com">Email us</a>
         </div>
-        <h1>The Antler Convoy</h1>
-        <p class="lead">Engineered middleware infrastructure specializing in automated stock synchronization, secure high-volume OAuth 2.0 connection maps, and structured enterprise marketplace catalog alignment.</p>
-    </header>
+      </div>
+      <div class="hero-mark">
+        <img src="/assets/logo-720.webp" alt="The Antler Convoy emblem: a glowing gold star beneath a whitetail antler rack" width="720" height="720">
+      </div>
+    </div>
+  </section>
 
-    <!-- Core Features Grid -->
-    <main class="container">
-        <h2>System Architecture Overview</h2>
-        <div class="grid">
-            <div class="card">
-                <h3>Relational Database Mapping</h3>
-                <p>Constructing multi-node Python pipelines optimized to synchronize internal inventory configurations directly with enterprise platform environments while handling strict rate limits securely.</p>
-            </div>
-            <div class="card">
-                <h3>Encrypted OAuth Lifecycles</h3>
-                <p>Deploying programmatic client credential environments to manage refreshing account application access patterns safely without workflow service disruption.</p>
-            </div>
-            <div class="card">
-                <h3>Taxonomical Formatting</h3>
-                <p>Converting internal raw product fields, item dimensions, and supply logistics dynamically into clean, compliant platform configurations that optimize platform readability.</p>
-            </div>
+  <section class="section" id="ventures" aria-labelledby="ventures-title">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Ventures</p>
+        <h2 id="ventures-title">What we make</h2>
+      </div>
+      <div class="grid">
+        <article class="card">
+          <span class="status live">Live</span>
+          <h3><a class="stretch" href="/ebay-store/">The Antler Convoy on eBay</a></h3>
+          <p>Our eBay store, with thousands of everyday products. Every order is covered by the eBay Money Back Guarantee.</p>
+          <p class="meta">eBay store</p>
+          <span class="more" aria-hidden="true">About the store →</span>
+        </article>
+        <article class="card">
+          <span class="status soon">Coming to Chrome and Edge</span>
+          <h3><a class="stretch" href="/sold-sorter/">Sold Sorter for eBay</a></h3>
+          <p>Sort eBay results by most sold, and see the real number sold on every listing.</p>
+          <p class="meta">Free · Pro $4.99/month or $29.99/year</p>
+          <span class="more" aria-hidden="true">About Sold Sorter →</span>
+        </article>
+        <article class="card">
+          <span class="status soon">Coming to Chrome and Edge</span>
+          <h3><a class="stretch" href="/flipcomp/">FlipComp</a></h3>
+          <p>See what a Facebook Marketplace item sells for on eBay, with your profit and a deal score, right on the listing.</p>
+          <p class="meta">5 free lookups a day · Pro $7.99/month</p>
+          <span class="more" aria-hidden="true">About FlipComp →</span>
+        </article>
+        <article class="card">
+          <span class="status soon">Coming to Chrome and Edge</span>
+          <h3><a class="stretch" href="/shopkeeper-for-roblox/">Shopkeeper for Roblox</a></h3>
+          <p>Create, reprice and rename Roblox game passes and developer products in bulk, with a preview before every change and an undo after it.</p>
+          <p class="meta">Free up to 10 items · Pro $4.99/month or $24.99 once</p>
+          <span class="more" aria-hidden="true">About Shopkeeper →</span>
+        </article>
+        <article class="card quiet">
+          <span class="status dev">In development</span>
+          <h3>Night Shift Garden</h3>
+          <p>A Roblox farming and survival game. Grow and sell crops by day, and defend your plot at night. Tend the garden. Survive the dark.</p>
+          <p class="meta">Roblox game</p>
+        </article>
+        <article class="card quiet">
+          <span class="status dev">In development</span>
+          <h3>Roblox Studio plugins</h3>
+          <p>Old-Growth Forest Generator fills an area with a whole forest, and Cozy Village Kit builds 12 matching farm-village props, one click each.</p>
+          <p class="meta">Roblox Studio</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="how-title">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">How we build</p>
+        <h2 id="how-title">Small tools, made with care</h2>
+      </div>
+      <div class="values">
+        <div class="value">
+          <h3>Private by design</h3>
+          <p>Our extensions have no ads and no tracking, and they ask for as few browser permissions as the job allows.</p>
         </div>
-
-        <h2>Environment Architecture</h2>
-        <div class="tech-strip">
-            <div class="tech-item">CORE // <span>Python 3.x</span></div>
-            <div class="tech-item">STACK // <span>RESTful APIs</span></div>
-            <div class="tech-item">AUTH // <span>OAuth 2.0 Protocols</span></div>
-            <div class="tech-item">DATA // <span>JSON Payload Sets</span></div>
+        <div class="value">
+          <h3>Gentle with the sites they use</h3>
+          <p>They read eBay and Roblox a little at a time and back off when asked to, so they keep working for you.</p>
         </div>
-    </main>
+        <div class="value">
+          <h3>A real inbox</h3>
+          <p>Write to <a href="mailto:support@theantlerconvoy.com">support@theantlerconvoy.com</a> and a person answers within two business days.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <!-- Footer System -->
-    <footer>
-        <p>&copy; 2026 The Antler Convoy. Systems restricted to internal operational mapping and private endpoint client management. All rights reserved.</p>
-    </footer>
+  <div class="wrap">
+    <section class="band" aria-labelledby="contact-title">
+      <div>
+        <h2 id="contact-title">Questions or feedback?</h2>
+        <p>Email us about any of our products. For an eBay order, message us through eBay so the details stay with your order.</p>
+      </div>
+      <a class="btn gold" href="mailto:support@theantlerconvoy.com">support@theantlerconvoy.com</a>
+    </section>
+  </div>
+</main>
 
+<footer class="site-foot">
+  <div class="wrap">
+    <p>© 2026 The Antler Convoy</p>
+    <nav aria-label="Footer">
+      <a href="/support/">Support</a>
+      <a href="/privacy/">Privacy</a>
+      <a href="mailto:support@theantlerconvoy.com">support@theantlerconvoy.com</a>
+    </nav>
+  </div>
+</footer>
 </body>
 </html>
