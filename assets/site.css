@@ -152,4 +152,21 @@ p{margin:0}
   .site-nav a{padding:10px 8px;letter-spacing:.1em}
   .btn{width:100%}
 }
-@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+/* ---------- motion and sound (assets/site.js; without it, everything simply shows) ---------- */
+.rise{opacity:0;transform:translateY(18px);transition:opacity .7s cubic-bezier(.2,.75,.25,1),transform .7s cubic-bezier(.2,.75,.25,1);transition-delay:var(--rise-delay,0ms)}
+.rise.in{opacity:1;transform:none}
+.card,.plan{transition:transform .3s cubic-bezier(.2,.8,.2,1),box-shadow .3s,border-color .2s}
+.card:has(a.stretch):hover,.plan:hover{transform:translateY(-4px);box-shadow:0 22px 40px -24px rgba(43,217,255,.45)}
+.btn{position:relative;overflow:hidden}
+.btn.gold::after{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent 30%,rgba(255,255,255,.5) 50%,transparent 70%);transform:translateX(-120%);transition:transform .75s ease;pointer-events:none}
+.btn.gold:hover::after{transform:translateX(120%)}
+.hero-mark{animation:float 7s ease-in-out infinite}
+.hero-mark img{animation:glow 7s ease-in-out infinite}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+@keyframes glow{0%,100%{filter:brightness(1)}50%{filter:brightness(1.1) saturate(1.05)}}
+.status.live::before{animation:breathe 2.4s ease-in-out infinite}
+@keyframes breathe{0%,100%{opacity:1}50%{opacity:.4}}
+.sound-btn{display:inline-grid;place-items:center;width:38px;height:38px;margin-left:2px;padding:0;border:0;border-radius:4px;background:transparent;color:var(--ink-dim);cursor:pointer}
+.sound-btn:hover{color:var(--ink);background:var(--line-soft)}
+.sound-btn svg{width:17px;height:17px}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}.rise{opacity:1;transform:none}}

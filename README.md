@@ -11,6 +11,8 @@ https://theantlerconvoy.com (the `CNAME` file). Plain HTML and one stylesheet; n
 | `support/`, `privacy/` | Contact, and this site's privacy note with links to each product's policy |
 | `404.html` | GitHub Pages shows this for an address that doesn't exist |
 | `assets/` | `site.css`, the fonts, the logo, the link-preview image (`og.png`) and screenshots |
+| `assets/site.js` | The rise-into-view motion and the quiet click and hover sounds, with the speaker switch in the header |
+| `assets/fx.js` | The sound engine: a copy of `shared/web/fx.js` in the command-center repository (copy it again after changing it there) |
 
 Each extension also has its own site at `theantlerconvoy.github.io/<name>/` (separate repositories).
 Their `privacy.html` addresses are built into the published extensions and their store listings, so
