@@ -182,6 +182,36 @@
       [146.8, 220, 293.7, 370, 440, 587.3].forEach((f, i) =>
         voice(SFX, { type: "triangle", f, t: t + i * 0.07, a: 0.06, d: 1.1, peak: 0.035, wet: 0.6 }));
     },
+    // The easter eggs' sounds (shared/web/eggs.js): small, made-up noises, nothing from the works.
+    splash(t) { hiss(SFX, { t, d: 0.5, peak: 0.06, f: 1800, to: 300, q: 0.6 }); voice(SFX, { f: 340, to: 120, t, d: 0.25, peak: 0.05 }); },
+    clop(t) { [0, 0.16, 0.42, 0.58].forEach((dt, i) => voice(SFX, { type: "triangle", f: i % 2 ? 620 : 760, to: i % 2 ? 480 : 560, t: t + dt, d: 0.05, peak: 0.07 })); },
+    gust(t) { hiss(SFX, { t, d: 1.6, a: 0.5, peak: 0.035, f: 500, to: 1400, q: 0.5, wet: 0.3 }); },
+    blip(t) { voice(SFX, { f: 1250, t, d: 0.08, peak: 0.07, wet: 0.35 }); },
+    mew(t) { voice(SFX, { type: "triangle", f: 620, to: 980, t, a: 0.05, d: 0.18, peak: 0.05 }); voice(SFX, { type: "triangle", f: 980, to: 560, t: t + 0.2, d: 0.25, peak: 0.045 }); },
+    fizz(t) { hiss(SFX, { t, d: 0.9, peak: 0.03, f: 6000, type: "highpass" }); },
+    pop(t) { voice(SFX, { f: 380, to: 1100, t, d: 0.07, peak: 0.08 }); },
+    boing(t) { voice(SFX, { type: "triangle", f: 180, to: 520, t, d: 0.12, peak: 0.07 }); voice(SFX, { type: "triangle", f: 520, to: 260, t: t + 0.12, d: 0.3, peak: 0.05 }); },
+    chug(t) { [0, 0.22, 0.44, 0.66, 0.88, 1.1].forEach((dt) => hiss(SFX, { t: t + dt, d: 0.14, peak: 0.05, f: 300, type: "lowpass" })); },
+    honk(t) { voice(SFX, { type: "square", f: 349, t, d: 0.18, peak: 0.04, filter: { f: 1400 } }); voice(SFX, { type: "square", f: 440, t, d: 0.18, peak: 0.035, filter: { f: 1400 } }); },
+    awooga(t) { voice(SFX, { type: "sawtooth", f: 220, to: 330, t, a: 0.02, d: 0.35, peak: 0.04, filter: { f: 1200 } }); voice(SFX, { type: "sawtooth", f: 330, to: 220, t: t + 0.4, d: 0.35, peak: 0.04, filter: { f: 1200 } }); },
+    oink(t) { [0, 0.2].forEach((dt) => voice(SFX, { type: "sawtooth", f: 260 - dt * 100, to: 165, t: t + dt, d: 0.15, peak: 0.05, filter: { f: 900, q: 4 } })); },
+    rumble(t) { hiss(SFX, { t, d: 1.6, a: 0.3, peak: 0.09, f: 140, type: "lowpass" }); voice(SFX, { f: 55, to: 40, t, a: 0.3, d: 1.3, peak: 0.12 }); },
+    bubble(t) { [0, 0.09, 0.2, 0.34, 0.46].forEach((dt, i) => voice(SFX, { f: 500 + i * 90, to: 900 + i * 120, t: t + dt, d: 0.05, peak: 0.04 })); },
+    snap(t) { hiss(SFX, { t, d: 0.05, peak: 0.12, f: 3500, type: "highpass" }); voice(SFX, { type: "square", f: 1800, t, d: 0.02, peak: 0.04 }); },
+    howl(t) { voice(SFX, { f: 380, to: 640, t, a: 0.4, hold: 0.4, d: 0.9, peak: 0.05, wet: 0.5 }); },
+    yip(t) { [0, 0.16].forEach((dt) => voice(SFX, { type: "triangle", f: 900, to: 1400, t: t + dt, d: 0.08, peak: 0.05 })); },
+    creak(t) { voice(SFX, { type: "sawtooth", f: 90, to: 140, t, a: 0.1, d: 0.6, peak: 0.03, filter: { f: 700, q: 6 } }); },
+    thud(t) { voice(SFX, { f: 110, to: 40, t, d: 0.25, peak: 0.18 }); hiss(SFX, { t, d: 0.2, peak: 0.06, f: 200, type: "lowpass" }); },
+    buzz(t) { voice(SFX, { type: "sawtooth", f: 120, t, a: 0.05, hold: 0.3, d: 0.15, peak: 0.012, filter: { f: 600 } }); },
+    warble(t) { [0, 0.15, 0.3, 0.45].forEach((dt, i) => voice(SFX, { f: i % 2 ? 700 : 900, to: i % 2 ? 900 : 700, t: t + dt, d: 0.15, peak: 0.035 })); },
+    flap(t) { [0, 0.12, 0.24, 0.36].forEach((dt) => hiss(SFX, { t: t + dt, d: 0.07, peak: 0.04, f: 900, q: 1.5 })); },
+    ting(t) { voice(SFX, { f: 2600, t, d: 0.5, peak: 0.04, wet: 0.5 }); },
+    chime(t) { voice(SFX, { f: 1568, t, d: 0.8, peak: 0.04, wet: 0.5 }); voice(SFX, { f: 2093, t: t + 0.08, d: 0.7, peak: 0.03, wet: 0.5 }); },
+    swell(t) { [261.6, 329.6, 392].forEach((f) => voice(SFX, { type: "triangle", f, t, a: 0.6, d: 1.4, peak: 0.025, wet: 0.6 })); },
+    erase(t) { [0, 0.1, 0.2, 0.3, 0.4].forEach((dt) => hiss(SFX, { t: t + dt, d: 0.06, peak: 0.025, f: 4000, type: "highpass" })); },
+    clack(t) { [0, 0.09, 0.2, 0.27, 0.38].forEach((dt) => { hiss(SFX, { t: t + dt, d: 0.03, peak: 0.08, f: 2500, q: 2 }); voice(SFX, { type: "square", f: 1100, t: t + dt, d: 0.01, peak: 0.02 }); }); },
+    puff(t) { hiss(SFX, { t, d: 0.25, peak: 0.05, f: 700, type: "lowpass" }); },
+    tock(t) { voice(SFX, { type: "square", f: 1700, t, d: 0.02, peak: 0.05, filter: { f: 3000 } }); voice(SFX, { type: "triangle", f: 800, t: t + 0.03, d: 0.04, peak: 0.04 }); },
   };
   // Some sounds can repeat quickly (hovering, counters rolling): at most one per this many milliseconds.
   const GAP = { hover: 70, tick: 45, click: 30, coin: 90 };
