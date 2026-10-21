@@ -8,6 +8,7 @@ https://theantlerconvoy.com (the `CNAME` file). Plain HTML and one stylesheet; n
 | `index.html` | Home: what The Antler Convoy makes, one card per venture |
 | `ebay-store/` | The eBay store |
 | `sold-sorter/`, `flipcomp/`, `shopkeeper-for-roblox/` | One page per browser extension |
+| `studio-plugins/` | The two Roblox Studio plugins and the Cozy Village model packs on the Creator Store |
 | `support/`, `privacy/` | Contact, and this site's privacy note with links to each product's policy |
 | `404.html` | GitHub Pages shows this for an address that doesn't exist |
 | `assets/` | `site.css`, the fonts, the logo, the link-preview image (`og.png`) and screenshots |
