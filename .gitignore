@@ -22,3 +22,25 @@ wallet*.json
 .DS_Store
 Thumbs.db
 desktop.ini
+
+# --- Convoy standard secrets block (V2 P0, I-4). Examples and templates stay tracked. ---
+!.env.example
+!.env.sample
+!.env.template
+!.dev.vars.example
+*.p12
+*.pfx
+*.keystore
+id_ecdsa*
+id_dsa*
+!id_*.pub
+.pypirc
+.netrc
+.git-credentials
+dump*.sql
+backup*.sql
+# Dependencies, build output, logs, OS clutter
+node_modules/
+dist/
+.wrangler/
+__pycache__/
