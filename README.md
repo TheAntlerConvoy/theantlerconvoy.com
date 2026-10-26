@@ -12,7 +12,9 @@ it, run `python -m http.server --directory docs` and open http://localhost:8000.
 | `docs/sold-sorter/`, `docs/flipcomp/`, `docs/shopkeeper-for-roblox/` | One page per browser extension |
 | `docs/studio-plugins/` | The two Roblox Studio plugins and the Cozy Village model packs on the Creator Store |
 | `docs/support/`, `docs/privacy/` | Contact, and this site's privacy note with links to each product's policy |
+| `docs/billing/` | Billing terms for the extensions' paid plans (refunds, cancelling, renewals) |
 | `docs/404.html` | GitHub Pages shows this for an address that doesn't exist |
+| `docs/robots.txt`, `docs/sitemap.xml` | Search engines may crawl every page; the sitemap lists each page by its canonical address. Add a new page to `sitemap.xml` |
 | `docs/assets/` | `site.css`, the fonts, the logo, the link-preview image (`og.png`) and screenshots |
 | `docs/assets/site.js` | The rise-into-view motion and the quiet click and hover sounds, with the speaker switch in the header |
 | `docs/assets/fx.js` | The sound engine: a copy of `shared/web/fx.js` in the command-center repository (copy it again after changing it there) |

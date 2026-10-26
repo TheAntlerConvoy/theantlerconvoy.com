@@ -1,0 +1,5 @@
+# Every page on theantlerconvoy.com may be crawled. The sitemap lists them.
+User-agent: *
+Allow: /
+
+Sitemap: https://theantlerconvoy.com/sitemap.xml
