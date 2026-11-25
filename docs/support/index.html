@@ -29,7 +29,12 @@
 </header>
 
 <main id="main">
-  <section class="page-head" aria-labelledby="title">
+  <section class="page-head fx3d-host" aria-labelledby="title" data-fx3d-host>
+    <div class="fx3d-a11y" hidden>
+      <p class="fx3d-desc">A calm help-desk beacon; the ways to reach us are in the text below.</p>
+      <ul class="fx3d-summary" aria-label="What the scene shows"></ul>
+    </div>
+    <button class="fx3d-pause" type="button" aria-pressed="false" hidden>Pause</button>
     <div class="wrap">
       <p class="eyebrow">Support</p>
       <h1 id="title">How to reach us</h1>
@@ -70,7 +75,6 @@
   </div>
 </footer>
 <script src="/assets/fx.js" defer></script>
-<script src="/assets/eggs.js" data-public defer></script>
 <script src="/assets/site.js" defer></script>
 </body>
 </html>

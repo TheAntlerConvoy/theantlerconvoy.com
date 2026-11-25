@@ -30,7 +30,12 @@
 </header>
 
 <main id="main">
-  <section class="hero" aria-labelledby="title">
+  <section class="hero fx3d-host" aria-labelledby="title" data-fx3d-host>
+    <div class="fx3d-a11y" hidden>
+      <p class="fx3d-desc">A slow fly-over of The Antler Convoy's city, one building for each venture listed below.</p>
+      <ul class="fx3d-summary" aria-label="What the scene shows"></ul>
+    </div>
+    <button class="fx3d-pause" type="button" aria-pressed="false" hidden>Pause</button>
     <div class="wrap">
       <div class="hero-text">
         <p class="eyebrow">Independent online ventures</p>
@@ -41,7 +46,7 @@
           <a class="btn" href="mailto:support@theantlerconvoy.com">Email us</a>
         </div>
       </div>
-      <div class="hero-mark">
+      <div class="hero-mark" data-fx3d-poster>
         <img src="/assets/logo-720.webp" alt="The Antler Convoy emblem: a glowing gold star beneath a whitetail antler rack" width="720" height="720">
       </div>
     </div>
@@ -145,7 +150,6 @@
   </div>
 </footer>
 <script src="/assets/fx.js" defer></script>
-<script src="/assets/eggs.js" data-public defer></script>
 <script src="/assets/site.js" defer></script>
 </body>
 </html>

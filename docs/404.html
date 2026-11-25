@@ -22,7 +22,12 @@
 </header>
 
 <main id="main">
-  <section class="page-head" aria-labelledby="title">
+  <section class="page-head fx3d-host" aria-labelledby="title" data-fx3d-host>
+    <div class="fx3d-a11y" hidden>
+      <p class="fx3d-desc">A stag looking around in fog, lost like this page.</p>
+      <ul class="fx3d-summary" aria-label="What the scene shows"></ul>
+    </div>
+    <button class="fx3d-pause" type="button" aria-pressed="false" hidden>Pause</button>
     <div class="wrap">
       <p class="eyebrow">404</p>
       <h1 id="title">That page isn't here</h1>
@@ -47,7 +52,6 @@
   </div>
 </footer>
 <script src="/assets/fx.js" defer></script>
-<script src="/assets/eggs.js" data-public defer></script>
 <script src="/assets/site.js" defer></script>
 </body>
 </html>
