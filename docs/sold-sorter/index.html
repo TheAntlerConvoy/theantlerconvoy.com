@@ -30,7 +30,12 @@
 </header>
 
 <main id="main">
-  <section class="page-head" aria-labelledby="title">
+  <section class="page-head fx3d-host" aria-labelledby="title" data-fx3d-host>
+    <div class="fx3d-a11y" hidden>
+      <p class="fx3d-desc">Sold Sorter as a small building opened like a diorama, with its screenshots as screens inside.</p>
+      <ul class="fx3d-summary" aria-label="What the scene shows"></ul>
+    </div>
+    <button class="fx3d-pause" type="button" aria-pressed="false" hidden>Pause</button>
     <div class="wrap">
       <p class="crumb"><a href="/#ventures">Ventures</a></p>
       <p class="eyebrow">Browser extension for Microsoft Edge</p>
@@ -125,7 +130,6 @@
   </div>
 </footer>
 <script src="/assets/fx.js" defer></script>
-<script src="/assets/eggs.js" data-public defer></script>
 <script src="/assets/site.js" defer></script>
 </body>
 </html>

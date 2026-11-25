@@ -15,10 +15,9 @@ it, run `python -m http.server --directory docs` and open http://localhost:8000.
 | `docs/billing/` | Billing terms for the extensions' paid plans (refunds, cancelling, renewals) |
 | `docs/404.html` | GitHub Pages shows this for an address that doesn't exist |
 | `docs/robots.txt`, `docs/sitemap.xml` | Search engines may crawl every page; the sitemap lists each page by its canonical address. Add a new page to `sitemap.xml` |
-| `docs/assets/` | `site.css`, the fonts, the logo, the link-preview image (`og.png`) and screenshots |
-| `docs/assets/site.js` | The rise-into-view motion and the quiet click and hover sounds, with the speaker switch in the header |
+| `docs/assets/` | `site.css`, the JetBrains Mono fonts (the only face the site uses), the logo, the link-preview image (`og.png`) and screenshots |
+| `docs/assets/site.js` | The rise-into-view motion and the quiet click and hover sounds, with the speaker switch in the header; also the 3D mount slot's loader: a hero section with `data-fx3d="<scene>"` loads `assets/fx3d/<scene>.js` after first render (no page names a scene yet) |
 | `docs/assets/fx.js` | The sound engine: a copy of `shared/web/fx.js` in the command-center repository (copy it again after changing it there) |
-| `docs/assets/eggs.js` | The easter eggs, a copy of `shared/web/eggs.js` in the command-center repository; loaded with `data-public`, so only the plainest few, rarely and unlabelled |
 
 Each extension also has its own site at `theantlerconvoy.github.io/<name>/` (separate repositories).
 Their `privacy.html` addresses are built into the published extensions and their store listings, so
